@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>管理员列表</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/tocss/main.css">
+    <style>
+        .myform-form {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .myform-form .myform-line {
+            width: 100%;
+            margin: 26px 0;
+        }
+
+        .myform-form .myform-left {
+            width: 150px;
+            text-align: right;
+            font-weight: normal;
+            margin-right: 10px;
+        }
+
+        .myform-form .myform-right {
+            width: 250px;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .myform-form .myform-btn {
+            width: 100px;
+            text-align: center;
+            color: #fff;
+            background-color: #22262e;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    {include file='common/header'}
+    <div class="mycontainer">
+        <div class="clearfix">
+            {include file='common/list'}
+            <!--右侧主内容开始-->
+            <section class="top-title">
+                <div class="col-md-12 column">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">控制面板</a></li>
+                        <li class="active">添加管理员</li>
+                    </ol>
+                </div>
+            </section>
+            <div class="rightbody">
+                <div class="myform-form">
+                    <form action="?" method="post">
+                        <p class="myform-line">
+                            <label class="myform-left">管理员账号：</label>
+                            <input class="myform-right" name="userName" type="text" placeholder="{$manager.userName}">
+                        </p>
+                        <p class="myform-line">
+                            <label class="myform-left">管理员密码：</label>
+                            <input class="myform-right" name="password" type="password" placeholder="请输入管理员密码">
+                        </p>
+                        <p class="myform-line">
+                            <label class="myform-left">管理员状态：</label>
+                            <span class="myform-right">
+                            正常&nbsp;<input type="radio" name="state" style="margin-right: 20px" value="1" {$manager.state?"checked":""}>
+                            锁定&nbsp;<input type="radio" name="state" value="0" {$manager.state?"":"checked"}>
+                            </span>
+                        </p>
+                        <p class="myform-line">
+                            <label class="myform-left"> </label>
+                            <!--左边占宽-->
+                            <input class="myform-right myform-btn" type="submit" value="修改">
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <!--右侧主内容结束-->
+        </div>
+    </div>
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#ulNav>li').click(function () {
+                $(this).toggleClass('active-liNav');
+            })
+        })
+    </script>
+</body>
+
+</html>

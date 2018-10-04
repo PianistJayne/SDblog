@@ -1,0 +1,72 @@
+<!--菜单列表开始-->
+<label id="toggle-label" class="visible-xs-inline-block" for="toggle-checkbox">
+    <span class="glyphicon glyphicon-menu-hamburger"></span>
+</label>
+<input class="hidden" id="toggle-checkbox" type="checkbox">
+<nav class="column leftul hidden-xs">
+    <div>
+        <div class="top-hidden"></div>
+        <div class="search">
+            <span class="glyphicon glyphicon-search"></span>
+            <input type="text" class="form-control">
+        </div>
+        <ul id="ulNav">
+            <li  class="active-liNav">
+                <a href="#">
+                    <span class="glyphicon glyphicon-user left-icon"></span>管理员
+                    <span class="glyphicon glyphicon-menu-right right-icon"></span>
+                </a>
+                <ul class="two-ul">
+                    <li class="active-two-li">
+                        <a href="{:url('manager/index')}">管理员列表
+                            <!--   <span class="glyphicon glyphicon-menu-right right-icon"></span> -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{:url('manager/add')}">添加管理员
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="glyphicon glyphicon-list-alt left-icon"></span>栏目
+                    <span class="glyphicon glyphicon-menu-right right-icon"></span>
+                </a>
+                <ul class="two-ul">
+                    <li>
+                        <a href="{:url('category/index')}">栏目列表
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{:url('category/add')}">添加栏目
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{:url('category/edit')}">栏目编辑
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="glyphicon glyphicon-cog left-icon"></span>系统
+                    <span class="glyphicon glyphicon-menu-right right-icon"></span>
+                </a>
+                <ul class="two-ul">
+                    <li>
+                        <a href="admininfo.html">系统信息
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="adminlogin.html">
+                    <span class="glyphicon glyphicon-log-out left-icon"></span>登出
+                    <span class="glyphicon glyphicon-menu-right right-icon"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--菜单列表结束-->

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>管理员列表</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/tocss/main.css">
+    <style>
+
+       /*管理员列表表格样式开始*/
+      .rightbody .mytable{
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+      }
+      .mytable th,
+      .mytable td{
+          border: 1px solid #ddd;
+          padding: 10px;
+      }
+      .mytable th{
+          background-color: #eee;
+      }
+      .mytable tr:not(:first-child):hover{
+          background-color: rgb(250, 250, 250   );
+      }
+      .mytable .label{
+          font-size: 15px;
+          font-weight: normal;
+          padding-top: 5px;
+          margin: 2px;
+          display: inline-block;
+      }
+      .mytable .label .glyphicon{
+          margin-right: 5px;
+      }
+      .mytable .wd20{         /*非账号列占宽*/
+          width: 20%;
+      }
+      /*管理员列表表格样式结束*/
+       
+      .fenye{
+          width: 100%;
+          text-align: center;
+          margin: 20px 0;
+      }
+
+    </style>
+</head>
+<body>
+    {include file='common/header'}
+    <div class="mycontainer">
+        <div class="clearfix">
+            {include file='common/list'}
+            <!--右侧主内容开始-->
+            <section class="top-title">
+                <div class="col-md-12 column">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">控制面板</a></li>
+                        <li class="active">管理员列表</li>
+                    </ol>
+                </div>
+            </section>
+            <div class="rightbody">
+                 <table class="mytable">
+                     <tr>
+                         <th width="80px">ID</th>
+                         <th>账号</th>
+                         <th width="100px">状态</th>
+                         <th width="170px">操作</th>
+                     </tr>
+                     <tr>
+                         {volist name="manager" id="vo"}
+                        <td>{$vo.id}</td>
+                        <td>{$vo.userName}</td>
+                         <td>
+                             <!--<label class="label label-success">label-success</label>-->
+                             <div class="label">
+                                 <span class="label label-success">{$vo.state==1?"正常":"锁定"}</span>
+                             </div>
+                         </td>
+                        <td>
+                            <a href="{:url('manager/edit',['id'=>$vo['id']])}" class="label label-warning"><span class="glyphicon glyphicon-edit"></span>编辑</a>
+                            <a href="{:url('manager/del',['id'=>$vo['id']])}" class="del label label-danger"><span class="glyphicon glyphicon-trash"></span>删除</a>
+                        </td>
+                         {/volist}
+                     </tr>
+                 </table>
+                 <div class="fenye">
+                 <ul class="pagination pagination-lg">
+                        {$manager->render()}
+                    </ul>
+                </div>
+            </div>
+            <!--右侧主内容结束-->
+        </div>
+    </div>
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#ulNav>li').click(function () {
+                $(this).toggleClass('active-liNav');
+            })
+            $('.del').on('click',function () {
+                var url = $(this).attr('href');
+                if (confirm('确定要删除管理员吗？') == true){
+                    location.href = url;
+                    location.reload();
+                }
+                else{
+                    alert('明智!!!');
+                    location.reload();
+                    return false;
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

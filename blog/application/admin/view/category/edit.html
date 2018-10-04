@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>栏目列表</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/tocss/main.css">
+    <style>
+        .myform-form {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .myform-form .myform-line {
+            width: 100%;
+            margin: 26px 0;
+        }
+
+        .myform-form .myform-left {
+            width: 150px;
+            text-align: right;
+            font-weight: normal;
+            margin-right: 10px;
+        }
+
+        .myform-form .myform-right {
+            width: 250px;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .myform-form .myform-btn {
+            width: 100px;
+            text-align: center;
+            color: #fff;
+            background-color: #22262e;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        input[type=file]{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--页头开始-->
+    {include file='common/list'}
+    <!--页头结束-->
+
+    <div class="mycontainer">
+        <div class="clearfix">
+
+            <!--菜单列表开始-->
+            {include file='common/list'}
+            <!--菜单列表结束-->
+
+            <!--主内容开始-->
+            <section class="top-title">
+                <div class="col-md-12 column">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">控制面板</a>
+                        </li>
+                        <li class="active">栏目编辑</li>
+                    </ol>
+                </div>
+            </section>
+            <div class="rightbody">
+                <div class="myform-form">
+                    <p class="myform-line">
+                        <label class="myform-left">栏目标题：</label>
+                        <input class="myform-right" type="text" placeholder="请输入栏目标题">
+                    </p>
+                    <p class="myform-line">
+                        <label class="myform-left">栏目图片：</label>
+                        <input type="file" class="myform-right">
+                    </p>
+
+                    <p class="myform-line">
+                        <label class="myform-left">栏目关键字：</label>
+                        <input class="myform-right" type="text" placeholder="请输入栏目关键字">
+                    </p>
+                    <p class="myform-line">
+                        <label class="myform-left">摘要信息：</label>
+                        <input class="myform-right" type="text" placeholder="请输入栏目摘要信息">
+                    </p>
+
+                    <p class="myform-line">
+                        <label class="myform-left"> </label>
+                        <!--左边占宽-->
+                        <input class="myform-right myform-btn" type="submit" value="修改">
+                    </p>
+                </div>
+            </div>
+            <!--右侧主内容结束-->
+        </div>
+    </div>
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#ulNav>li').click(function () {
+                $(this).toggleClass('active-liNav');
+            })
+        })
+    </script>
+</body>
+
+</html>

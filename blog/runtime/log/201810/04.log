@@ -1,0 +1,207 @@
+---------------------------------------------------------------
+[ 2018-10-04T15:54:41+08:00 ] 127.0.0.1 POST /
+[ info ] master.test.dphub.sandai.net:80/ [运行时间：0.690190s][吞吐率：1.45req/s] [内存消耗：1,302.41kb] [文件加载：36]
+[ info ] [ LANG ] D:\mysite\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'master.test.dphub.sandai.net:80',
+  'content-type' => 'application/octet-stream',
+  'content-length' => '256',
+  'connection' => 'Close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\mysite\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-04T16:05:37+08:00 ] 0.0.0.0 GET /admin
+[ info ] localhost/admin [运行时间：0.263251s][吞吐率：3.80req/s] [内存消耗：1,682.50kb] [文件加载：47]
+[ info ] [ LANG ] D:\mysite\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=162a9edfe9d2f4-0da9c82b72c279-3c604504-1fa400-162a9edfe9e6c1; pgv_pvi=2027288352; CNZZDATA155540=cnzz_eid%3D181953864-1523268512-%26ntime%3D1526372652',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-04T16:05:37+08:00 ] 0.0.0.0 GET /admin/login/index.html
+[ info ] localhost/admin/login/index.html [运行时间：0.083708s][吞吐率：11.95req/s] [内存消耗：1,678.10kb] [文件加载：46]
+[ info ] [ LANG ] D:\mysite\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=162a9edfe9d2f4-0da9c82b72c279-3c604504-1fa400-162a9edfe9e6c1; pgv_pvi=2027288352; CNZZDATA155540=cnzz_eid%3D181953864-1523268512-%26ntime%3D1526372652; PHPSESSID=bb84gn57kjc5eik5hcsj8hbrs4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\mysite\blog\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\mysite\blog\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-04T16:05:37+08:00 ] 0.0.0.0 GET /captcha.html
+[ info ] localhost/captcha.html [运行时间：0.165874s][吞吐率：6.03req/s] [内存消耗：1,368.20kb] [文件加载：37]
+[ info ] [ LANG ] D:\mysite\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=162a9edfe9d2f4-0da9c82b72c279-3c604504-1fa400-162a9edfe9e6c1; pgv_pvi=2027288352; CNZZDATA155540=cnzz_eid%3D181953864-1523268512-%26ntime%3D1526372652; PHPSESSID=bb84gn57kjc5eik5hcsj8hbrs4',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\mysite\blog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-04T16:05:48+08:00 ] 0.0.0.0 POST /admin/login/index
+[ info ] localhost/admin/login/index [运行时间：1.371831s][吞吐率：0.73req/s] [内存消耗：2,383.39kb] [文件加载：51]
+[ info ] [ LANG ] D:\mysite\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '27',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=162a9edfe9d2f4-0da9c82b72c279-3c604504-1fa400-162a9edfe9e6c1; pgv_pvi=2027288352; CNZZDATA155540=cnzz_eid%3D181953864-1523268512-%26ntime%3D1526372652; PHPSESSID=bb84gn57kjc5eik5hcsj8hbrs4',
+)
+[ info ] [ PARAM ] array (
+  'userName' => 'test1',
+  'password' => '123',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\mysite\blog\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.036591s ] mysql:host=localhost;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manager` [ RunTime:0.046257s ]
+[ sql ] [ SQL ] SELECT * FROM `manager` WHERE  `userName` = 'test1' LIMIT 1 [ RunTime:0.000718s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `loginlog` [ RunTime:0.032643s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `loginlog` LIMIT 1 [ RunTime:0.000499s ]
+[ sql ] [ SQL ] INSERT INTO `loginlog` (`mid` , `loginIP` , `loginTime` , `loginMSG`) VALUES (1 , 0 , 1538640348 , '管理员密码不正确') [ RunTime:0.012503s ]
+---------------------------------------------------------------
+[ 2018-10-04T16:05:54+08:00 ] 0.0.0.0 GET /captcha.html?0.5359253902617793
+[ info ] localhost/captcha.html?0.5359253902617793 [运行时间：0.083358s][吞吐率：12.00req/s] [内存消耗：1,368.42kb] [文件加载：37]
+[ info ] [ LANG ] D:\mysite\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=162a9edfe9d2f4-0da9c82b72c279-3c604504-1fa400-162a9edfe9e6c1; pgv_pvi=2027288352; CNZZDATA155540=cnzz_eid%3D181953864-1523268512-%26ntime%3D1526372652; PHPSESSID=bb84gn57kjc5eik5hcsj8hbrs4',
+)
+[ info ] [ PARAM ] array (
+  '0_5359253902617793' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\mysite\blog\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
